@@ -76,13 +76,13 @@ elif [[ $1 == 'train' ]]; then
         --dropatt=0.0 \
         --learning_rate=0.00010 \
         --warmup_steps=0 \
-        --train_steps=1000000 \
+        --train_steps=1000 \
         --tgt_len=${TGT_LEN} \
         --mem_len=${MEM_LEN} \
         --train_batch_size=${BSZ} \
         --num_core_per_host=${NUM_CORE} \
         --iterations=200 \
-        --save_steps=10 \
+        --save_steps=100 \
         ${@:2}
 elif [[ $1 == 'eval' ]]; then
     echo 'Run evaluation...'
